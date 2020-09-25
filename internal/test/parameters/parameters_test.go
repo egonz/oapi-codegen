@@ -12,7 +12,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/deepmap/oapi-codegen/pkg/testutil"
+	"github.com/egonz/oapi-codegen/pkg/testutil"
 )
 
 type testServer struct {
@@ -386,7 +386,6 @@ func TestParameterBinding(t *testing.T) {
 	assert.Equal(t, http.StatusOK, result.Code())
 	assert.EqualValues(t, &expectedComplexObject, ts.complexObject)
 	ts.reset()
-
 
 	// ---------------------- Test Header Query Parameters --------------------
 
